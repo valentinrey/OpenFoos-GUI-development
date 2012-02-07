@@ -1,12 +1,54 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<link rel="stylesheet" type="text/css" href="style.css"/>
-		<title></title></head>
-	<body>
-		<div id="player1" class="player"></div>
-		<div id="player2" class="player"></div>
-		<footer></footer><!--end footer-->
-		<div id="welcome"></div><!-- end div welcome-->
-	</body>
+<html lang="en">
+    <head>
+        <title>Velkommen til openfoss</title>
+        <link rel="stylesheet" type="text/css" href="styles.css"></link>
+        <script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <div class="center overflow">
+        <div id="container">
+                <!--<div class="circle"></div>-->
+                <div id="player1" class="players"></div>
+                <div id="player2" class="players"></div>       
+        </div><!-- end #container-->
+       </div><!-- .center .overflow -->
+       
+        <footer>
+            <div id="backlayer"></div>
+            <div class="center overflow">
+            <div id="layer">
+                <h1>Welcome to Openfoss</h1>
+                <h4>Start by selecting one of the players</h4>
+                <input type="submit" id="start" value="Start"/>
+                <form>
+                    <input type="text" id="textfield" name="demoname" required placeholder="enter your player name.." title="name"/>
+                    <input type="submit" id="submit" value="Submit"/>
+                </form>
+                
+                <div id="scoreboard">
+                    <!--<div id="h" class="text">HJEM</div>
+                    <div id="v" class="text">GJEST</div>-->
+                    
+                        <div id="home" class="goal">
+                            <h6>HOME</h6>
+                            <P>10</p>
+                        </div><!--end hoem-->
+                        <div id="visitor" class="goal">
+                            <h6>VISITORS</h6>
+                            <p>5</p>
+                        </div><!--end visitor-->
+                    <div id="fores">
+                        <!--<div id="watch" class="time"></div>
+                        <div id="digital" class="time"></div> -->
+                    </div><!-- end fores-->
+                    
+                </div><!-- end scoreboard-->
+                
+            </div>
+            </div><!-- .center.overflow -->
+        </footer>
+    </body>
 </html>
+
