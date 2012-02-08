@@ -2,9 +2,13 @@
 <html lang="en">
     <head>
         <title>Velkommen til openfoss</title>
-        <link rel="stylesheet" type="text/css" href="styles.css"></link>
+        <link rel="stylesheet" type="text/css" href="styles.css" media="screen/handheld"/>
+	<meta name="viewport" content="width-device-width; initial-scale=1.0"/>
         <script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+		<script src="jquery.js"></script>
         <script src="script.js"></script>
+		<script src="watch.js"></script>
+	
     </head>
     <body>
         <div class="center overflow">
@@ -15,15 +19,50 @@
         </div><!-- end #container-->
        </div><!-- .center .overflow -->
        
+       
+       <div class="center overflow">
+       <div id="end-game">
+           <h1>Congratulasjons Ola, You won the match!</h1>
+           <div id="stat">
+			<div id="stat-center">
+               <!--div id="player1-stat" class="players-stat"></div>
+               <div id="player2-stat" class="players-stat"></div-->
+					<table width="500" border="0">
+						<tr>
+							<th>Ola normann</th><th>Valentin</th>
+						</tr>
+						<tr>
+							<td>Won: 87</td><td>Won: 88</td>
+						</tr>
+						<tr>
+							<td>Lost: 6</td><td>Lost: 1</td>
+						</tr>
+						<tr>
+							<td>Rank: #1</td><td>Rank: #1</td>
+						</tr>
+					</table>
+               </div>
+               
+           </div>
+               <button id="restart" class="buttons" onclick="startTimer()">re-start</button>
+               <button id="quit" class="buttons">quit</button>
+       </div><!-- #end-game -->
+       </div>
+       
         <footer>
             <div id="backlayer"></div>
             <div class="center overflow">
             <div id="layer">
-                <h1>Welcome to Openfoss</h1>
-                <h4>Start by selecting one of the players</h4>
-                <input type="submit" id="start" value="Start"/>
+                <hgroup>
+                    <h1>Welcome to Openfoss</h1>
+                    <br>
+                    <h4>Start by selecting one of the players</h4>
+                </hgroup>
+                
+                <input type="submit" id="start" value="Start" onclick="startTimer()"/>
                 <form>
-                    <input type="text" id="textfield" name="demoname" required placeholder="enter your player name.." title="name"/>
+                    <input type="text" id="textfield" name="demoname" 
+                           required placeholder="enter your player name.." title="name"/>
                     <input type="submit" id="submit" value="Submit"/>
                 </form>
                 
@@ -34,19 +73,22 @@
                         <div id="home" class="goal">
                             <h6>HOME</h6>
                             <P>10</p>
-                        </div><!--end hoem-->
+                        </div><!-- #home -->
                         <div id="visitor" class="goal">
                             <h6>VISITORS</h6>
                             <p>5</p>
-                        </div><!--end visitor-->
+                        </div><!-- #visitor -->
                     <div id="fores">
-                        <!--<div id="watch" class="time"></div>
-                        <div id="digital" class="time"></div> -->
-                    </div><!-- end fores-->
+                        <!--<div id="circle" class="time"></div>-->
+                        <div id="digital">
+                            <p id="test2">00:00</p>
+                        </div>
+                        
+                    </div><!--  #fores-->
                     
-                </div><!-- end scoreboard-->
+                </div><!-- #scoreboard-->
                 
-            </div>
+            </div><!-- #layer -->
             </div><!-- .center.overflow -->
         </footer>
     </body>

@@ -24,24 +24,26 @@ body{
     width: auto;
     height: auto;
 }
-.circle{
+#circle{
     display: block; 
-    width: 150px; 
-    height: 150px; 
+    width: 15px; 
+    height: 15px; 
     /*background-color: silver;*/
-    border: 10px solid white; 
+    border: 1px solid white; 
     border-radius: 360px;
-    margin: 0 auto;
+    /*margin: 0 auto;
     /*list-style: none;*/
+    
 }
 
 #container{
     width: 980px;
     height: 400px;
-    margin-top: 40%;
+    margin-top: 25%;
     /*margin-left: auto;
     margin-right: auto;
     margin: 10% 20% 10% 20%;*/
+    display: none;
 }
 
 
@@ -59,14 +61,14 @@ body{
     background: -webkit-gradient(linear, right top, left top, color-stop(0,burlywood), color-stop(1,#A15421)); 
 }
 
-#layer h1, h4{
+#layer hgroup{
     text-align: center;
     font-family: lucida handwriting;
     margin: 5%;
     display: none;
 }
 
-h1{
+#layer h1{
     font-size:3.5em;
 }
 
@@ -152,7 +154,7 @@ form{
     margin-left: auto;
     margin-right: auto;
     margin-top: 2%;
-    border-radius: 1%;
+    border-radius: 5px;
     -webkit-box-shadow: 3px 3px 50px #000;
     background: -webkit-gradient(linear, left bottom, left top, from(#000000), to(#3D3D3D));
 }
@@ -201,23 +203,30 @@ h6{
     background-color: black;
     width: 630px;
     height: 120px;
-    border-radius: 2%;
-    -webkit-box-shadow: 0px 3px 20px #000;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 0px 10px #000;
     background: -webkit-gradient(linear, left bottom, left top, from(#171717), to(#3D3D3D));
 }
 
-.time{
+#digital{
     width: 100px;
-    height: 30px;
-    background: white;
+    height: 40px;
+    border-radius: 1%;
+    background: -webkit-gradient(linear, left bottom, left top, from(#3D3D3D), to(black));
+    margin: 15% 0% 0% 5%;
+    position: absolute;
+color: red;
+/*text-align: center;
+font-size: 1.5em;
+padding: 5px;*/
 }
-#watch{
-    display: block; 
-    width: 1px; 
-    height: 1px; 
-    /*background-color: silver;*/
-    border: 5px solid white; 
-    border-radius: 36px;
+
+
+#test2{
+    text-align: center;
+    color: silver;
+    font-size: 1.5em;
+    padding: 5px;
 }
 
 /*
@@ -239,14 +248,6 @@ h6{
     background-color: yellow;
 }
 */
-#htable{
-    background-color: red;
-    width: 100px;
-    height: 140px;
-    margin-left: auto;
-    margin-right: auto;
-    z-index: -1;
-}
 
 .center{
     width: 980px;
@@ -256,3 +257,103 @@ h6{
 .overflow{
     overflow: hidden;
 }
+
+#end-game{
+    width: 980px;
+    height: 500px;
+    background-color: silver;
+    border-radius: 0px 0px 10px 10px;
+    background: -webkit-gradient(linear, right top, left top, from(rgb(211,211,211)), to(rgb(248,248,248)));
+    /*background: -webkit-radial-gradient(circle, rgb(252,252,252), rgb(234,234,234));*/
+	display: block;
+}
+
+#end-game h1{
+    text-align: center;
+    font-family: lucida handwriting;
+    font-size: 1.8em;
+    margin-bottom: 1%;
+}
+
+#stat{
+    width: 800px;
+    height: 360px;
+    background-color: white;
+    margin: 0 auto;
+    margin-top: 2.5%;
+    border-radius: 10px;
+    -webkit-box-shadow: 30px 30px 100px #fff;
+}
+
+.buttons{
+    width: 130px;
+    height: 50px;
+    font-family: cursive;
+    font-size: 1.2em;
+    color: rgb(155,99,0);
+    background: -webkit-gradient(linear, left top, left bottom, from(rgb(253,235,141)), to(rgb(228,202,99)));
+    border-radius: .3em;
+    border: 1px rgb(133,133,133)solid;
+    margin-bottom: 1%;
+}
+
+#restart{
+    
+    float: left;
+    margin-left: 25%;
+}
+
+#quit{
+    float: right;
+    margin-right: 25%;
+}
+
+/*
+@media screen{
+	#container #layer #backlayer #fores #end-game{
+		width:50%;
+                height: 50%;
+	}  
+
+	header h1#logo a{
+		width:1100px;
+		height:150px;
+		
+	}                          
+
+}*/
+
+@media handheld{
+    #container #layer #backlayer #fores #end-game{
+        width: auto;
+        height: auto;
+    }
+}
+
+.players-stat{
+	background-color: red;
+    /*background-image: url(img/player.png);*/
+    height: 130px;
+    width: 198px;
+}
+
+#stat-center{
+	background-color:none;/*yellow*/
+	height:130px;
+	width:400px;
+	margin: 215px 200px 215px 200px;
+	position: absolute;
+	text-align: left;
+	
+}
+
+#player2-stat{
+	float:right;
+	border-left: 2px solid blue;
+}
+#player1-stat{
+	float:left;
+	border-right: 2px solid black;
+}
+
+
