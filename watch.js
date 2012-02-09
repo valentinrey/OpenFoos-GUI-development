@@ -1,9 +1,10 @@
 var seconds = 0;
 var minutes = 0;
+var startTime = 0;
 //called when the page loads to begin the timer
 function startTimer(){
-	//100 milliseconds = 1 second
-	window.setInterval("updateTime()", 1000);
+	//1000 milliseconds = 1 second
+	startTime = setInterval("updateTime()", 1000);
 }
 
 //called every 100 milliseconds to update the timer
@@ -28,4 +29,10 @@ function updateTime(){
 	document.getElementById("watch").innerHTML = timeWatch;
 
 	//document.getElementById("vis").innerHTML = $("#soFar").text();
+}
+
+function stopTimer(){
+	var endTime = $("#watch").text();
+	clearInterval(startTime);
+	document.getElementById("watch").innerHTML = endTime;
 }
