@@ -215,18 +215,25 @@ h6{
     background: -webkit-gradient(linear, left bottom, left top, from(#3D3D3D), to(black));
     margin: 15% 0% 0% 5%;
     position: absolute;
-color: red;
 /*text-align: center;
 font-size: 1.5em;
 padding: 5px;*/
 }
 
 
-#test2{
+#watch{
     text-align: center;
     color: silver;
+	text-shadow: black 2px 2px 2px;
     font-size: 1.5em;
     padding: 5px;
+
+}
+
+.reflection{
+        -webkit-box-reflect:below -19px 
+		-webkit-gradient(linear, left top, left bottom, from(transparent), 
+			color-stop(0.5, transparent), to(black));
 }
 
 /*
@@ -355,5 +362,6 @@ padding: 5px;*/
 	float:left;
 	border-right: 2px solid black;
 }
+
 
 
