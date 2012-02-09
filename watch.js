@@ -25,7 +25,7 @@ function updateTime(){
 	var timeWatch = currentMinutes + ":" + currentSeconds;
 
 
-	document.getElementById("test2").innerHTML = timeWatch;
+	document.getElementById("watch").innerHTML = timeWatch;
 
 	//document.getElementById("vis").innerHTML = $("#soFar").text();
 }
