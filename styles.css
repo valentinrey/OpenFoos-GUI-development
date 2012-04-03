@@ -43,7 +43,7 @@ body{
     /*margin-left: auto;
     margin-right: auto;
     margin: 10% 20% 10% 20%;*/
-    display: none;
+    display: block;
 }
 
 
@@ -315,11 +315,11 @@ padding: 5px;*/
     margin-right: 25%;
 }
 
-/*
-@media screen{
+
+@media screen and (min-width: 1200px){
 	#container #layer #backlayer #fores #end-game{
-		width:50%;
-                height: 50%;
+				width:125%;
+                height: 125%;
 	}  
 
 	header h1#logo a{
@@ -328,7 +328,7 @@ padding: 5px;*/
 		
 	}                          
 
-}*/
+}
 
 @media handheld{
     #container #layer #backlayer #fores #end-game{

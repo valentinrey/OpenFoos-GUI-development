@@ -1,13 +1,21 @@
 var seconds = 0;
 var minutes = 0;
-var startTime = 0;
+var interval = null;
+var timeWatch = 0;
+var control = false;
 //called when the page loads to begin the timer
 function startTimer(){
-	//1000 milliseconds = 1 second
-	startTime = setInterval("updateTime()", 1000);
+	
+	//if(!control){
+		//1000 milliseconds = 1 second
+	if(interval === null){
+		//control = true;
+	
+		interval = setInterval("updateTime()", 1000);
+		}
 }
 
-//called every 100 milliseconds to update the timer
+//called every 1000 milliseconds to update the timer
 function updateTime(){
 	++seconds;
 	var currentMinutes = "0" + minutes;
@@ -23,9 +31,9 @@ function updateTime(){
 		minutes++;
 	}
 
-	var timeWatch = currentMinutes + ":" + currentSeconds;
+	timeWatch = currentMinutes + ":" + currentSeconds;
 
-
+	document.getElementById("watch").value = timeWatch;
 	document.getElementById("watch").innerHTML = timeWatch;
 
 	//document.getElementById("vis").innerHTML = $("#soFar").text();
@@ -33,6 +41,12 @@ function updateTime(){
 
 function stopTimer(){
 	var endTime = $("#watch").text();
-	clearInterval(startTime);
-	document.getElementById("watch").innerHTML = endTime;
+	if(interval !== null){
+		interval = clearInterval(interval);
+		interval = null;
+	}
+
+	//$("#watch").text(timeWatch);
+	//control = false;
+	
 }
